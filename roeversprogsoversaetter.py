@@ -15,7 +15,7 @@ class Roeversprogsoversaetter(QMainWindow):
     def __init__(self):
         super().__init__()
         self.ui = loader.load("roeversprogsoversaetter.ui", None)
-        self.ui.setWindowTitle("en anden titel")
+        self.ui.setWindowTitle("Oversætter yayayayay")
         self.ui.oversaet_knap.clicked.connect(self.oversaet)
         # self.ui.show()
 
