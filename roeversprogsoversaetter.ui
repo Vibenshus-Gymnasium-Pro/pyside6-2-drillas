@@ -34,7 +34,7 @@
       <number>37</number>
      </property>
      <item>
-      <widget class="QPlainTextEdit" name="plainTextEdit_2"/>
+      <widget class="QPlainTextEdit" name="danskinput"/>
      </item>
      <item>
       <widget class="QPushButton" name="oversaet_knap">
@@ -44,7 +44,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPlainTextEdit" name="plainTextEdit"/>
+      <widget class="QPlainTextEdit" name="roever_output"/>
      </item>
     </layout>
    </widget>
@@ -99,7 +99,7 @@
     <property name="geometry">
      <rect>
       <x>-10</x>
-      <y>20</y>
+      <y>40</y>
       <width>701</width>
       <height>81</height>
      </rect>

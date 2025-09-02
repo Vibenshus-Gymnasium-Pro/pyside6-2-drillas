@@ -2,7 +2,16 @@
 # Dette er et modul til oversættelse mellem almindelige sprog og røversprog
 
 def oversaet_til_roeversprog(inputtekst):
-    outputtekst = "Denne funktion skal kunne oversætte til røversprog."
+
+    vokaler = "aeiouyæøåAEIOUYÆØÅ"
+    outputtekst = ""
+
+    for bogstav in inputtekst:
+        if bogstav.isalpha() and bogstav not in vokaler:
+            outputtekst += bogstav + "o" + bogstav.lower()
+        else:
+            outputtekst += bogstav
+
     return outputtekst
 
 

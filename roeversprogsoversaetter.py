@@ -5,7 +5,6 @@ import roeversprog
 
 from PySide6.QtWidgets import QApplication, QMainWindow
 from PySide6.QtUiTools import QUiLoader
-from PySide6.QtCore import QFile, QObject
 
 
 loader = QUiLoader()
@@ -20,10 +19,9 @@ class Roeversprogsoversaetter(QMainWindow):
         # self.ui.show()
 
     def oversaet(self):
-        output_fra_oversaetteren = roeversprog.oversaet_til_roeversprog(
-            "input som ikke bruges"
-        )
-        print(output_fra_oversaetteren)
+        input_text = self.ui.danskinput.toPlainText()
+        output_fra_oversaetteren = roeversprog.oversaet_til_roeversprog(input_text)
+        self.ui.roever_output.setPlainText(output_fra_oversaetteren)
 
 
 program = QApplication.instance()
