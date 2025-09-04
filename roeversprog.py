@@ -16,6 +16,25 @@ def oversaet_til_roeversprog(inputtekst):
 
 
 def oversaet_fra_roeversprog_til_andet_sprog(inputtekst):
-    outputtekst = "Her skal røversproget fjernes og almindeligt sprog skal returneres.\nGiv gerne fejlmeddelelser, hvis røversproget ikke er korrekt."
+
+    vokaler = "aeiouyæøåAEIOUYÆØÅ"
+    outputtekst = ""
+    i = 0
+
+    while i < len(inputtekst):
+        bogstav = inputtekst[i]
+
+        if bogstav.isalpha() and bogstav not in vokaler:
+            if i + 2 < len(inputtekst):
+                if inputtekst[i+1] == "o" and inputtekst[i+2].lower() == bogstav.lower():
+                    outputtekst += bogstav
+                    i += 3
+                else:
+                    return "Fejl: Ugyldigt røversprog ved position " + str(i) + "."
+            else:
+                return "Fejl: Ufuldstændigt røversprog ved slutningen af teksten."
+        else:
+            outputtekst += bogstav
+            i += 1
+
     return outputtekst
-# Udvikling af logik:1 ends here
